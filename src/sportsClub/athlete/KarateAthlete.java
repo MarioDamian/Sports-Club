@@ -2,6 +2,7 @@ package sportsClub.athlete;
 
 import sportsClub.address.Address;
 import sportsClub.salary.Salary;
+import sportsClub.sponsors.Sponsor;
 
 import java.util.Arrays;
 
@@ -11,8 +12,8 @@ public class KarateAthlete extends Athlete{
     public KarateAthlete() {
     }
 
-    public KarateAthlete(Address home, Salary salary, String[] nume, int age, int height, int weight, String[] specialization) {
-        super(home, salary, nume, age, height, weight);
+    public KarateAthlete(Address home, Salary salary, String[] nume, int age, int height, int weight, Sponsor sponsor, String[] specialization) {
+        super(home, salary, nume, age, height, weight, sponsor);
         this.specialization = specialization;
     }
 
@@ -34,6 +35,7 @@ public class KarateAthlete extends Athlete{
                 ", age=" + age +
                 ", height=" + height +
                 ", weight=" + weight +
+                ", sponsor=" + sponsor +
                 '}';
     }
 }

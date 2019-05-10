@@ -2,6 +2,7 @@ package sportsClub.athlete;
 
 import sportsClub.address.Address;
 import sportsClub.salary.Salary;
+import sportsClub.sponsors.Sponsor;
 
 import java.util.Arrays;
 
@@ -12,17 +13,19 @@ public class Athlete {
     protected int age;
     protected int height;
     protected int weight;
+    protected Sponsor sponsor;
 
     public Athlete() {
     }
 
-    public Athlete(Address home, Salary salary, String[] nume, int age, int height, int weight) {
+    public Athlete(Address home, Salary salary, String[] nume, int age, int height, int weight, Sponsor sponsor) {
         this.home = home;
         this.salary = salary;
         this.nume = nume;
         this.age = age;
         this.height = height;
         this.weight = weight;
+        this.sponsor = sponsor;
     }
 
     public Address getHome() {
@@ -73,4 +76,11 @@ public class Athlete {
         this.weight = weight;
     }
 
+    public Sponsor getSponsor() {
+        return sponsor;
+    }
+
+    public void setSponsor(Sponsor sponsor) {
+        this.sponsor = sponsor;
+    }
 }
