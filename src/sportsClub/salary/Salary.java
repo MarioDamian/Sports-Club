@@ -1,16 +1,16 @@
 package sportsClub.salary;
 
 public class Salary {
-    private int amount;
+    private Integer amount;
 
     public Salary() {
     }
 
-    public Salary(int amount) {
+    public Salary(Integer amount) {
         this.amount = amount;
     }
 
-    public int getAmount() {
+    public Integer getAmount() {
         return amount;
     }
 

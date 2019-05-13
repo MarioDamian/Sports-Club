@@ -1,16 +1,12 @@
 package sportsClub.sponsors;
 
-import sportsClub.salary.Salary;
-
-import java.util.Arrays;
-
 public class SponsorNike extends Sponsor{
     private boolean isTheFaceOfNewestAirMax;
 
     public SponsorNike() {
     }
 
-    public SponsorNike(String[] logo, Salary bonusAwardFromSponsor, boolean appearsInAd, boolean isTheFaceOfNewestAirMax) {
+    public SponsorNike(String logo, int bonusAwardFromSponsor, boolean appearsInAd, boolean isTheFaceOfNewestAirMax) {
         super(logo, bonusAwardFromSponsor, appearsInAd);
         this.isTheFaceOfNewestAirMax = isTheFaceOfNewestAirMax;
     }
@@ -27,9 +23,9 @@ public class SponsorNike extends Sponsor{
     public String toString() {
         return "SponsorNike{" +
                 "isTheFaceOfNewestAirMax=" + isTheFaceOfNewestAirMax +
-                ", logo=" + Arrays.toString(logo) +
+                ", logo='" + logo + '\'' +
                 ", bonusAwardFromSponsor=" + bonusAwardFromSponsor +
-                ", appearsInAd=" + appearsInAds +
-                '}';
+                ", appearsInAds=" + appearsInAds +
+                '}' + "\n";
     }
 }

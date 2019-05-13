@@ -8,7 +8,8 @@ public class SponsorAdidas extends Sponsor{
     public SponsorAdidas() {
     }
 
-    public SponsorAdidas(boolean appearsOnEquipment) {
+    public SponsorAdidas(String logo, int bonusAwardFromSponsor, boolean appearsInAds, boolean appearsOnEquipment) {
+        super(logo, bonusAwardFromSponsor, appearsInAds);
         this.appearsOnEquipment = appearsOnEquipment;
     }
 
@@ -24,9 +25,9 @@ public class SponsorAdidas extends Sponsor{
     public String toString() {
         return "SponsorAdidas{" +
                 "appearsOnEquipment=" + appearsOnEquipment +
-                ", logo=" + Arrays.toString(logo) +
+                ", logo='" + logo + '\'' +
                 ", bonusAwardFromSponsor=" + bonusAwardFromSponsor +
                 ", appearsInAds=" + appearsInAds +
-                '}';
+                '}' + "\n";
     }
 }

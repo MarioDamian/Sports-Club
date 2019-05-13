@@ -1,16 +1,12 @@
 package sportsClub.sponsors;
 
-import sportsClub.salary.Salary;
-
-import java.util.Arrays;
-
 public class SponsorNB extends Sponsor {
     private boolean hasOwnCollection;
 
     public SponsorNB() {
     }
 
-    public SponsorNB(String[] logo, Salary bonusAwardFromSponsor, boolean appearsInAds, boolean hasOwnCollection) {
+    public SponsorNB(String logo, int bonusAwardFromSponsor, boolean appearsInAds, boolean hasOwnCollection) {
         super(logo, bonusAwardFromSponsor, appearsInAds);
         this.hasOwnCollection = hasOwnCollection;
     }
@@ -27,9 +23,9 @@ public class SponsorNB extends Sponsor {
     public String toString() {
         return "SponsorNB{" +
                 "hasOwnCollection=" + hasOwnCollection +
-                ", logo=" + Arrays.toString(logo) +
+                ", logo='" + logo + '\'' +
                 ", bonusAwardFromSponsor=" + bonusAwardFromSponsor +
                 ", appearsInAds=" + appearsInAds +
-                '}';
+                '}' + "\n";
     }
 }

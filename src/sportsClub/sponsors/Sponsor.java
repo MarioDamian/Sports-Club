@@ -1,34 +1,32 @@
 package sportsClub.sponsors;
 
-import sportsClub.salary.Salary;
-
 public class Sponsor {
-    protected String[] logo;
-    protected Salary bonusAwardFromSponsor;
+    protected String logo;
+    protected int bonusAwardFromSponsor;
     protected boolean appearsInAds;
 
     public Sponsor() {
     }
 
-    public Sponsor(String[] logo, Salary bonusAwardFromSponsor, boolean appearsInAds) {
+    public Sponsor(String logo, int bonusAwardFromSponsor, boolean appearsInAds) {
         this.logo = logo;
         this.bonusAwardFromSponsor = bonusAwardFromSponsor;
         this.appearsInAds = appearsInAds;
     }
 
-    public String[] getLogo() {
+    public String getLogo() {
         return logo;
     }
 
-    public void setLogo(String[] logo) {
+    public void setLogo(String logo) {
         this.logo = logo;
     }
 
-    public Salary getBonusAwardFromSponsor() {
+    public int getBonusAwardFromSponsor() {
         return bonusAwardFromSponsor;
     }
 
-    public void setBonusAwardFromSponsor(Salary bonusAwardFromSponsor) {
+    public void setBonusAwardFromSponsor(int bonusAwardFromSponsor) {
         this.bonusAwardFromSponsor = bonusAwardFromSponsor;
     }
 

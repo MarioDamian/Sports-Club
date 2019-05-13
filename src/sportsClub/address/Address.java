@@ -3,22 +3,22 @@ package sportsClub.address;
 import java.util.Arrays;
 
 public class Address {
-    private String[] street;
+    private String street;
     private int nr;
 
     public Address() {
     }
 
-    public Address(String[] street, int nr) {
+    public Address(String street, int nr) {
         this.street = street;
         this.nr = nr;
     }
 
-    public String[] getStreet() {
+    public String getStreet() {
         return street;
     }
 
-    public void setStreet(String[] street) {
+    public void setStreet(String street) {
         this.street = street;
     }
 
@@ -33,7 +33,7 @@ public class Address {
     @Override
     public String toString() {
         return "Address{" +
-                "street=" + Arrays.toString(street) +
+                "street='" + street + '\'' +
                 ", nr=" + nr +
                 '}';
     }

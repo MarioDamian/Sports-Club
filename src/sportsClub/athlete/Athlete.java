@@ -6,10 +6,10 @@ import sportsClub.sponsors.Sponsor;
 
 import java.util.Arrays;
 
-public class Athlete {
+public abstract class Athlete implements Comparable<Athlete>{
     protected Address home;
     protected Salary salary;
-    protected String[] nume;
+    protected String nume;
     protected int age;
     protected int height;
     protected int weight;
@@ -18,7 +18,7 @@ public class Athlete {
     public Athlete() {
     }
 
-    public Athlete(Address home, Salary salary, String[] nume, int age, int height, int weight, Sponsor sponsor) {
+    public Athlete(Address home, Salary salary, String nume, int age, int height, int weight, Sponsor sponsor) {
         this.home = home;
         this.salary = salary;
         this.nume = nume;
@@ -44,11 +44,11 @@ public class Athlete {
         this.salary = salary;
     }
 
-    public String[] getNume() {
+    public String getNume() {
         return nume;
     }
 
-    public void setNume(String[] nume) {
+    public void setNume(String nume) {
         this.nume = nume;
     }
 
@@ -82,5 +82,12 @@ public class Athlete {
 
     public void setSponsor(Sponsor sponsor) {
         this.sponsor = sponsor;
+    }
+
+    public abstract Integer getSalaryWithBonus();
+
+    @Override
+    public int compareTo(Athlete a) {
+        return this.salary.getAmount().compareTo(a.salary.getAmount());
     }
 }
