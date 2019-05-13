@@ -108,6 +108,11 @@ public class Service {
     }
 
         public int howManyAthletesOnDoeStreet() {
+            StringBuilder stringBuilder = new StringBuilder("");
+            stringBuilder.append(new Object(){}.getClass().getEnclosingMethod().getName()).append(",").append("1");
+            FileTextServiceTimesApel.getInstance().writeTextToFile(stringBuilder.toString(),
+                    "files/times.csv");
+
             int n = 0;
             for(int i = 0; i < athletes.length; i++)
                 if(athletes[i].getHome().getStreet() == "John Doe Street" || athletes[i].getHome().getStreet() == "Jane Doe Street")
@@ -116,6 +121,11 @@ public class Service {
         }
 
         public int howManySalariesUnder10000() {
+            StringBuilder stringBuilder = new StringBuilder("");
+            stringBuilder.append(new Object(){}.getClass().getEnclosingMethod().getName()).append(",").append("1");
+            FileTextServiceTimesApel.getInstance().writeTextToFile(stringBuilder.toString(),
+                    "files/times.csv");
+
             int n = 0;
             for(int i = 0; i < salaries.length; i++)
                 if(salaries[i].getAmount() < 10000)
@@ -124,6 +134,11 @@ public class Service {
         }
 
         public int howManyAthletesWithoutMedicalInsurance() {
+            StringBuilder stringBuilder = new StringBuilder("");
+            stringBuilder.append(new Object(){}.getClass().getEnclosingMethod().getName()).append(",").append("1");
+            FileTextServiceTimesApel.getInstance().writeTextToFile(stringBuilder.toString(),
+                    "files/times.csv");
+
             int n = 0;
             for(int i = 0; i < files.length; i++)
                 if(files[i] instanceof MedicalRecord && ((MedicalRecord)files[i]).isMedicallyCleared())
@@ -132,6 +147,11 @@ public class Service {
         }
 
         public Salary biggestSalary() {
+            StringBuilder stringBuilder = new StringBuilder("");
+            stringBuilder.append(new Object(){}.getClass().getEnclosingMethod().getName()).append(",").append("1");
+            FileTextServiceTimesApel.getInstance().writeTextToFile(stringBuilder.toString(),
+                    "files/times.csv");
+
             Salary s = new Salary();
             int n = 0;
             for(int i = 0; i < athletes.length; i++)
@@ -144,6 +164,11 @@ public class Service {
         }
 
         public Athlete athleteWithBiggestSalaryAndBonus() {
+            StringBuilder stringBuilder = new StringBuilder("");
+            stringBuilder.append(new Object(){}.getClass().getEnclosingMethod().getName()).append(",").append("1");
+            FileTextServiceTimesApel.getInstance().writeTextToFile(stringBuilder.toString(),
+                    "files/times.csv");
+
             Athlete a = null;
             Salary s = new Salary();
             int n = 0;
@@ -159,6 +184,11 @@ public class Service {
         }
 
         public Vector<Athlete> athletesAppearingInAds() {
+            StringBuilder stringBuilder = new StringBuilder("");
+            stringBuilder.append(new Object(){}.getClass().getEnclosingMethod().getName()).append(",").append("1");
+            FileTextServiceTimesApel.getInstance().writeTextToFile(stringBuilder.toString(),
+                    "files/times.csv");
+
             Vector<Athlete> v = new Vector<Athlete>();
             for(int i = 0; i < athletes.length; i++)
             {
@@ -169,6 +199,11 @@ public class Service {
         }
 
         public int howManyAthletesUnder30() {
+            StringBuilder stringBuilder = new StringBuilder("");
+            stringBuilder.append(new Object(){}.getClass().getEnclosingMethod().getName()).append(",").append("1");
+            FileTextServiceTimesApel.getInstance().writeTextToFile(stringBuilder.toString(),
+                    "files/times.csv");
+
             int n = 0;
             for(int i = 0; i < athletes.length; i++)
                 if(athletes[i].getAge() < 30)
@@ -177,6 +212,11 @@ public class Service {
         }
 
         public Vector<Sponsor> allAdidasSponsors() {
+            StringBuilder stringBuilder = new StringBuilder("");
+            stringBuilder.append(new Object(){}.getClass().getEnclosingMethod().getName()).append(",").append("1");
+            FileTextServiceTimesApel.getInstance().writeTextToFile(stringBuilder.toString(),
+                    "files/times.csv");
+
             Vector<Sponsor> v = new Vector<Sponsor>();
             for(int i = 0; i < sponsors.length; i++)
                 if(sponsors[i] instanceof SponsorAdidas)
@@ -185,6 +225,11 @@ public class Service {
         }
 
         public int howManyInjuredAthletes() {
+            StringBuilder stringBuilder = new StringBuilder("");
+            stringBuilder.append(new Object(){}.getClass().getEnclosingMethod().getName()).append(",").append("1");
+            FileTextServiceTimesApel.getInstance().writeTextToFile(stringBuilder.toString(),
+                    "files/times.csv");
+
             int n = 0;
             for(int i = 0; i < files.length; i++)
                 if(files[i] instanceof MedicalRecord && !((MedicalRecord)files[i]).isMedicallyCleared())
@@ -193,6 +238,11 @@ public class Service {
         }
 
         public int howManyRightHandedTennisPlayers() {
+            StringBuilder stringBuilder = new StringBuilder("");
+            stringBuilder.append(new Object(){}.getClass().getEnclosingMethod().getName()).append(",").append("1");
+            FileTextServiceTimesApel.getInstance().writeTextToFile(stringBuilder.toString(),
+                    "files/times.csv");
+
             int n = 0;
             for(int i = 0; i < athletes.length; i++)
                 if(athletes[i] instanceof TennisPlayer && ((TennisPlayer)athletes[i]).getFavoriteHand() == "Right")
@@ -201,6 +251,11 @@ public class Service {
         }
 
         public void printAthletesSorted() {
+            StringBuilder stringBuilder = new StringBuilder("");
+            stringBuilder.append(new Object(){}.getClass().getEnclosingMethod().getName()).append(",").append("1");
+            FileTextServiceTimesApel.getInstance().writeTextToFile(stringBuilder.toString(),
+                    "files/times.csv");
+
             for(int i = 0; i < athletes.length; i++)
                 System.out.println(athletesList);
         }
