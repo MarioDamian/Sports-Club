@@ -60,6 +60,6 @@ public class Powerlifter extends Athlete {
                 ", height=" + height +
                 ", weight=" + weight +
                 ", sponsor=" + sponsor +
-                '}' + "\n";
+                '}' + "\nlif";
     }
 }

@@ -49,15 +49,20 @@ public class Service {
         salaries[9] = new Salary(15000);
 
         sponsors[0] = new SponsorAdidas("Adidas", 5000, true, true);
-        sponsors[1] = new SponsorAdidas("Nike", 2000, true, false);
-        sponsors[2] = new SponsorAdidas("New Balance", 1000, false, false);
-        sponsors[3] = new SponsorAdidas("New Balance", 2500, true, true);
-        sponsors[4] = new SponsorAdidas("NikeAirMax", 5000, true, false);
-        sponsors[5] = new SponsorAdidas("AdidasOriginal", 7500, true, false);
-        sponsors[6] = new SponsorAdidas("Nike", 1500, false, false);
-        sponsors[7] = new SponsorAdidas("New Balance", 3500, true, true);
+        //sponsors[1] = new SponsorNike("Nike", 2000, true, false);
+        sponsors[2] = new SponsorNB("New Balance", 1000, false, false);
+        //sponsors[3] = new SponsorNB("New Balance", 2500, true, true);
+        sponsors[4] = new SponsorNike("NikeAirMax", 5000, true, false);
+        //sponsors[5] = new SponsorAdidas("AdidasOriginal", 7500, true, false);
+        sponsors[6] = new SponsorNike("Nike", 1500, false, false);
+        sponsors[7] = new SponsorNB("New Balance", 3500, true, true);
         sponsors[8] = new SponsorAdidas("Adidas", 10000, true, true);
-        sponsors[9] = new SponsorAdidas("Nike", 2500, false, false);
+        //sponsors[9] = new SponsorRolex("Rolex", 12000, true, true);
+
+        sponsors[1] = FileTextServiceNike.getInstance().readNikeFromFile("files/adidas.csv");
+        sponsors[3] = FileTextServiceNB.getInstance().readNBFromFile("files/nb.csv");
+        sponsors[5] = FileTextServiceAdidas.getInstance().readAdidasFromFile("files/adidas.csv");
+        sponsors[9] = FileTextServiceRolex.getInstance().readRolexFromFile("files/rolex.csv");
 
         athletes[0] = new KarateAthlete(addresses[0], salaries[0], "John Johnes", 23, 195, 93, sponsors[0], "Kumite");
         athletes[1] = new KarateAthlete(addresses[1], salaries[1], "Alex Stanley", 29, 172, 77, sponsors[1], "Kata");
@@ -105,6 +110,7 @@ public class Service {
             athletesList.add(athletes[i]);
         }
         Collections.sort(athletesList);
+
     }
 
         public int howManyAthletesOnDoeStreet() {
@@ -259,4 +265,41 @@ public class Service {
             for(int i = 0; i < athletes.length; i++)
                 System.out.println(athletesList);
         }
+
+        public List<Athlete> powerLifters() {
+            List<Athlete> powerLifters = new ArrayList<>();
+            for(int i = 0; i < athletes.length; i++) {
+                if (athletes[i] instanceof Powerlifter)
+                    powerLifters.add(athletes[i]);
+            }
+            return powerLifters;
+        }
+
+        public List<Athlete> athletesUnder35() {
+            List<Athlete> athletesUnder35 = new ArrayList<>();
+            for(int i = 0; i < athletes.length; i++) {
+                if(athletes[i].getAge() < 35)
+                    athletesUnder35.add(athletes[i]);
+            }
+            return athletesUnder35;
+        }
+
+        public List<Sponsor> sponsorsWithBonusMoreThan2000() {
+            List<Sponsor> sponsorsWithBonusMoreThan2000 = new ArrayList<>();
+            for(int i = 0; i < sponsors.length; i++) {
+                if(sponsors[i].getBonusAwardFromSponsor() > 2000)
+                    sponsorsWithBonusMoreThan2000.add(sponsors[i]);
+            }
+            return sponsorsWithBonusMoreThan2000;
+        }
+
+        public List<Athlete> athletesWithSalaryMoreThan5000() {
+            List<Athlete> athletesWithSalaryMoreThan5000 = new ArrayList<>();
+            for(int i = 0; i < athletes.length; i++) {
+                if(athletes[i].getAge() < 35)
+                    athletesWithSalaryMoreThan5000.add(athletes[i]);
+            }
+            return athletesWithSalaryMoreThan5000;
+        }
+
 }

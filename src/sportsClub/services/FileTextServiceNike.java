@@ -27,7 +27,7 @@ public class FileTextServiceNike {
         }
     }
 
-    public SponsorNike readAdidasFromFile(String fileNamePath) {
+    public SponsorNike readNikeFromFile(String fileNamePath) {
         SponsorNike nike = null;
         try {
             LineNumberReader lineNumberReader = new LineNumberReader(new FileReader((fileNamePath)));

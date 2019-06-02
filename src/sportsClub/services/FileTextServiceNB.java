@@ -27,7 +27,7 @@ public class FileTextServiceNB {
         }
     }
 
-    public SponsorNB readAdidasFromFile(String fileNamePath) {
+    public SponsorNB readNBFromFile(String fileNamePath) {
         SponsorNB nb = null;
         try {
             LineNumberReader lineNumberReader = new LineNumberReader(new FileReader((fileNamePath)));

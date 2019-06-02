@@ -2,6 +2,8 @@ package sportsClub;
 
 import sportsClub.services.Service;
 
+import java.io.IOException;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println(Service.getInstance().howManyAthletesOnDoeStreet());
@@ -15,5 +17,7 @@ public class Main {
         System.out.println(Service.getInstance().howManyInjuredAthletes());
         System.out.println(Service.getInstance().howManyRightHandedTennisPlayers());
         Service.getInstance().printAthletesSorted();
+
+
     }
 }
